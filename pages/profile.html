@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <h1 class="h1">Personal Blogging App</h1>
+      </div>
+      <div class="navbar-right">
+        <a href="./profile.html" id="username">username</a>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </nav>
+    <div class="profile-heading">
+      <h1 class="profiletext">Profile</h1>
+    </div>
+
+    <div class="profile">
+      <div class="profile-img">
+        <img
+          src="https://images.pexels.com/photos/17680520/pexels-photo-17680520/free-photo-of-woman-with-red-lipstick.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+      </div>
+      <div class="details">
+        <h2 class="text">Inzamam Malik</h2>
+        <h2 class="text pass">Password</h2>
+        <input type="password" name="Old password" placeholder="Old Password" />
+        <input type="password" name="New password" placeholder="New password" />
+        <input
+          type="password"
+          name="Repeat password"
+          placeholder="Repeat password"
+        />
+        <input type="button" value="Update password" />
+      </div>
+    </div>
+
+    <script>
+      // Assuming you're using Firebase Authentication
+      const logoutButton = document.getElementById("logout-btn");
+
+      logoutButton
+        .addEventListener("click", () => {
+          // Perform logout operation using Firebase Authentication
+
+          // Redirect to the login page after logout
+          window.location.href = "./login.html"; // Change the path as needed
+        })
+        .catch((error) => {
+          // Handle logout error
+          console.error("Logout error:", error);
+        });
+    </script>
+  </body>
+</html>
